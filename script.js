@@ -14,10 +14,11 @@ $(document).ready(function() {
     let conditions = $('#conditions');
     conditions.empty();
     conditions.append(`<h3>Weather Data for ${weatherData.display_location.city}</h3>`
-      + `<h2>${weatherData.temperature_string}</h2>`
-      + `Weather: ${weatherData.weather}<br/>UV Index: ${weatherData.UV}<br/>`
-      + `Humidity: ${weatherData.relative_humidity}<br/>Wind: ${weatherData.wind_string}`
-      + `<small>(${weatherData.observation_time})</small>`
+      + `<h2>${weatherData.temperature_string}</h2><b>Feels Like</b>: ${weatherData.feelslike_string}`
+      + `<br/><b>Weather</b>: ${weatherData.weather}<br/><b>UV Index</b>: ${weatherData.UV}<br/>`
+      + `<b>Humidity</b>: ${weatherData.relative_humidity}<br/><b>Wind</b>: ${weatherData.wind_string}`
+      + `<br/><b>Local Time</b>: ${weatherData.local_time_rfc822}`
+      + `<br/><br/><small>(${weatherData.observation_time})</small>`
     );
   }
 
